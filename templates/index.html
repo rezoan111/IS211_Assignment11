@@ -1,1 +1,25 @@
+<!doctype html>
+<html>
+<head>
+    <title>To Do List</title>
+</head>
+<body>
+    <h1>To Do List</h1>
 
+    <table border="1">
+        <tr>
+            <th>Task</th>
+            <th>Email</th>
+            <th>Priority</th>
+        </tr>
+
+        {% for item in todo_items %}
+        <tr>
+            <td>{{ item.task }}</td>
+            <td>{{ item.email }}</td>
+            <td>{{ item.priority }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
